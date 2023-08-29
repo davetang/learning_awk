@@ -62,7 +62,23 @@ And that's more or less about it.
 
 ## Getting started
 
-Following this [Getting Started with AWK guide](https://linuxhandbook.com/awk-command-tutorial/).
+From [Getting Started with
+`awk`](https://www.gnu.org/software/gawk/manual/gawk.html#Getting-Started).
+
+> The basic function of `awk` is to search files for lines (or other units of
+> text) that contain certain patterns. When a line matches one of the patterns,
+> `awk` performs specified actions on that line. `awk` continues to process
+> input lines in this way until it reaches the end of the input files.
+
+A rule consists of a _pattern_ followed by an _action_. The action is enclosed
+in braces and newlines usually separate rules. Therefore an `awk` program looks
+like this:
+
+```
+pattern { action }
+pattern { action }
+...
+```
 
 ### Pre-defined variables
 
@@ -201,13 +217,14 @@ awk '+$1 { gsub(/ +/, "-", $2); print }' FS=, data/test.dat
 ## Further reading
 
 * [The GNU Awk User's Guide](https://www.gnu.org/software/gawk/manual/gawk.html)
+* [Getting Started with AWK guide](https://linuxhandbook.com/awk-command-tutorial/)
 
 ## Version
 
-Bash version used to generate this document.
+AWK version used to generate this document.
 
 ```{bash}
-#| label: bash_version
+#| label: awk_version
 
-bash --version
+awk --version
 ```
