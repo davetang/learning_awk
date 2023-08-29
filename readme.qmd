@@ -1,0 +1,37 @@
+---
+title: "Learning AWK"
+date: '`r format(Sys.Date(), "%Y-%m-%d")`'
+date-format: "YYYY-MM-DD"
+execute:
+  echo: true
+  cache: false
+format:
+   gfm:
+     html-math-method: webtex
+     toc: true
+engine: knitr
+---
+
+![Build README](https://github.com/davetang/learning_awk/actions/workflows/create_readme.yml/badge.svg)
+
+Learning AWK.
+
+## Motivation
+
+After failing to use AWK, I always resort back to using `perl -lane`. This
+works fine but perhaps more people are familiar with AWK than Perl. Here I'll
+try to finally learn the AWK syntax.
+
+## Further reading
+
+* [The GNU Awk User's Guide](https://www.gnu.org/software/gawk/manual/gawk.html)
+
+## Version
+
+Bash version used to generate this document.
+
+```{bash}
+#| label: bash_version
+
+bash --version
+```
