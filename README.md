@@ -65,8 +65,22 @@ And that’s more or less about it.
 
 ## Getting started
 
-Following this [Getting Started with AWK
-guide](https://linuxhandbook.com/awk-command-tutorial/).
+From [Getting Started with
+`awk`](https://www.gnu.org/software/gawk/manual/gawk.html#Getting-Started).
+
+> The basic function of `awk` is to search files for lines (or other
+> units of text) that contain certain patterns. When a line matches one
+> of the patterns, `awk` performs specified actions on that line. `awk`
+> continues to process input lines in this way until it reaches the end
+> of the input files.
+
+A rule consists of a *pattern* followed by an *action*. The action is
+enclosed in braces and newlines usually separate rules. Therefore an
+`awk` program looks like this:
+
+    pattern { action }
+    pattern { action }
+    ...
 
 ### Pre-defined variables
 
@@ -298,18 +312,25 @@ awk '+$1 { gsub(/ +/, "-", $2); print }' FS=, data/test.dat
 
 - [The GNU Awk User’s
   Guide](https://www.gnu.org/software/gawk/manual/gawk.html)
+- [Getting Started with AWK
+  guide](https://linuxhandbook.com/awk-command-tutorial/)
+- [Difference Between awk, nawk, gawk and
+  mawk](https://www.baeldung.com/linux/awk-nawk-gawk-mawk-difference)
 
 ## Version
 
-Bash version used to generate this document.
+`awk` version used to generate this document.
 
 ``` bash
-bash --version
+awk -W version
 ```
 
-    GNU bash, version 5.1.16(1)-release (x86_64-pc-linux-gnu)
-    Copyright (C) 2020 Free Software Foundation, Inc.
-    License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+    mawk 1.3.4 20200120
+    Copyright 2008-2019,2020, Thomas E. Dickey
+    Copyright 1991-1996,2014, Michael D. Brennan
 
-    This is free software; you are free to change and redistribute it.
-    There is NO WARRANTY, to the extent permitted by law.
+    random-funcs:       srandom/random
+    regex-funcs:        internal
+    compiled limits:
+    sprintf buffer      8192
+    maximum-integer     2147483647
