@@ -218,13 +218,14 @@ awk '+$1 { gsub(/ +/, "-", $2); print }' FS=, data/test.dat
 
 * [The GNU Awk User's Guide](https://www.gnu.org/software/gawk/manual/gawk.html)
 * [Getting Started with AWK guide](https://linuxhandbook.com/awk-command-tutorial/)
+* [Difference Between awk, nawk, gawk and mawk](https://www.baeldung.com/linux/awk-nawk-gawk-mawk-difference)
 
 ## Version
 
-AWK version used to generate this document.
+`awk` version used to generate this document.
 
 ```{bash}
 #| label: awk_version
 
-awk --version
+awk -W version
 ```
