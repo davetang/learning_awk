@@ -14,17 +14,15 @@ engine: knitr
 
 ![Build README](https://github.com/davetang/learning_awk/actions/workflows/create_readme.yml/badge.svg)
 
-Learning AWK.
-
 ## Motivation
 
-After failing to use AWK, I always resort back to using `perl -lane`. This
+After failing to use `awk`, I always resort back to using `perl -lane`. This
 works fine but perhaps more people are familiar with AWK than Perl. Here I'll
-try to finally learn the AWK syntax.
+try to finally learn AWK syntax using examples.
 
 ## Using AWK
 
-99% of the time I use AWK is because it can print specific columns even with
+99% of the time I use `awk` is because it can print specific columns even with
 inconsistent delimiting. Consider the following output.
 
 ```{bash}
@@ -42,7 +40,7 @@ when the output is irregular.
 for f in $(ls *.sh); do wc ${f}; done | cut -f3-4 -d' '
 ```
 
-AWK handles this nicely (somehow).
+`awk` handles this nicely.
 
 ```{bash}
 #| label: wc_shell_script_awk
@@ -58,7 +56,7 @@ I also know how to use the Output Field Separator.
 for f in $(ls *.sh); do wc ${f}; done | awk 'OFS="," {print $3,$4}'
 ```
 
-And that's more or less about it.
+And that sums up all I used to know about using `awk`.
 
 ## Getting started
 
@@ -79,6 +77,14 @@ pattern { action }
 pattern { action }
 ...
 ```
+
+### Naming
+
+AWK refers to the scripting language, which has different interpreters like
+`awk`, `nawk`, `mawk`, etc. The output generated in this document is by using
+[mawk](#version). The different interpreters have different features but the
+examples in this document should generate the same output even among the
+different interpreters.
 
 ### Pre-defined variables
 
