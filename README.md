@@ -1,9 +1,10 @@
 # Learning AWK
-2023-08-29
+2023-09-15
 
 - [Motivation](#motivation)
 - [Using AWK](#using-awk)
 - [Getting started](#getting-started)
+  - [Naming](#naming)
   - [Pre-defined variables](#pre-defined-variables)
   - [Syntax](#syntax)
   - [Examples](#examples)
@@ -13,18 +14,16 @@
 ![Build
 README](https://github.com/davetang/learning_awk/actions/workflows/create_readme.yml/badge.svg)
 
-Learning AWK.
-
 ## Motivation
 
-After failing to use AWK, I always resort back to using `perl -lane`.
+After failing to use `awk`, I always resort back to using `perl -lane`.
 This works fine but perhaps more people are familiar with AWK than Perl.
-Here I’ll try to finally learn the AWK syntax.
+Here I’ll try to finally learn AWK syntax using examples.
 
 ## Using AWK
 
-99% of the time I use AWK is because it can print specific columns even
-with inconsistent delimiting. Consider the following output.
+99% of the time I use `awk` is because it can print specific columns
+even with inconsistent delimiting. Consider the following output.
 
 ``` bash
 for f in $(ls *.sh); do wc ${f}; done
@@ -43,7 +42,7 @@ for f in $(ls *.sh); do wc ${f}; done | cut -f3-4 -d' '
      61
     88 
 
-AWK handles this nicely (somehow).
+`awk` handles this nicely.
 
 ``` bash
 for f in $(ls *.sh); do wc ${f}; done | awk '{print $3,$4}'
@@ -61,7 +60,7 @@ for f in $(ls *.sh); do wc ${f}; done | awk 'OFS="," {print $3,$4}'
     421,git_setup.sh
     1919,render.sh
 
-And that’s more or less about it.
+And that sums up all I used to know about using `awk`.
 
 ## Getting started
 
@@ -81,6 +80,14 @@ enclosed in braces and newlines usually separate rules. Therefore an
     pattern { action }
     pattern { action }
     ...
+
+### Naming
+
+AWK refers to the scripting language, which has different interpreters
+like `awk`, `nawk`, `mawk`, etc. The output generated in this document
+is by using [mawk](#version). The different interpreters have different
+features but the examples in this document should generate the same
+output even among the different interpreters.
 
 ### Pre-defined variables
 
