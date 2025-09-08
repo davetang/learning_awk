@@ -18,7 +18,7 @@ jobs:
     # a list of the steps that will run as part of the job
     steps:
       - name: Check out repository code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v5
       - run: echo "The workflow is now ready to test your code on the runner."
 
       - name: Build README
