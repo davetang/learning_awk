@@ -184,8 +184,7 @@ makes it easy to remove duplicate lines.
 awk '!l[$0]++' data/test.dat
 ```
 
-I don't understand how this works, but the following removes multiple spaces
-(default field separator).
+The following is an awk trick that removes multiple spaces by default, since the default output field separator (OFS) is a single space. In awk, assigning to a field ($1, $2, etc.) causes the entire line (`$0`) to be rebuilt from the fields, using the current OFS; the same effect can be achieved with `$2=$2`.
 
 ```{bash}
 #| label: removing_multiple_spaces
