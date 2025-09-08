@@ -117,6 +117,19 @@ so we _could_ exclude it in the example below but it makes it less readable.
 awk '1 {print}' data/test.dat
 ```
 
+### Multiple patterns
+
+Multiple patterns can be used.
+
+```{bash}
+#| label: multiple_patterns
+
+awk '
+/WARNING/ {warn++ }
+/ERROR/   {err++ }
+END       {print "\nSummary: " warn " warnings, " err " errors"}' data/eg.log
+```
+
 ### Examples
 
 Skip header.

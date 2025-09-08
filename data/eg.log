@@ -1,0 +1,9 @@
+2025-09-08 10:00:01 [INFO] Starting web server
+2025-09-08 10:00:02 [INFO] Listening on port 8080
+2025-09-08 10:00:05 [WARNING] High memory usage detected
+2025-09-08 10:00:08 [INFO] Processing request from 192.168.1.10
+2025-09-08 10:00:12 [ERROR] Failed to write to database
+2025-09-08 10:00:15 [INFO] Retrying database connection
+2025-09-08 10:00:20 [WARNING] Slow query detected
+2025-09-08 10:00:25 [WARNING] Cache miss ratio above threshold
+2025-09-08 10:00:30 [INFO] Health check passed
