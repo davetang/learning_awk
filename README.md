@@ -7,6 +7,7 @@
   - [Naming](#naming)
   - [Pre-defined variables](#pre-defined-variables)
   - [Syntax](#syntax)
+  - [Multiple patterns](#multiple-patterns)
   - [Examples](#examples)
 - [Further reading](#further-reading)
 - [Version](#version)
@@ -137,6 +138,20 @@ awk '1 {print}' data/test.dat
 
 
     17,05 apr 2019,abhishek,guest
+
+### Multiple patterns
+
+Multiple patterns can be used.
+
+``` bash
+awk '
+/WARNING/ {warn++ }
+/ERROR/   {err++ }
+END       {print "\nSummary: " warn " warnings, " err " errors"}' data/eg.log
+```
+
+
+    Summary: 3 warnings, 1 errors
 
 ### Examples
 
