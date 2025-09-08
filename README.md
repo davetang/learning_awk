@@ -1,5 +1,5 @@
 # Learning AWK
-2023-09-15
+2025-09-08
 
 - [Motivation](#motivation)
 - [Using AWK](#using-awk)
